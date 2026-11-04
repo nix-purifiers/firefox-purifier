@@ -1,0 +1,83 @@
+{
+  "entries": [
+    {
+      "hash": "sha256-cAYzOVqi9jmhvtQlPicwnrZ280bVmbCuK3oEUyMuCuw=",
+      "id": "addon@darkreader.org",
+      "mirrors": [],
+      "path": "addon@darkreader.org.xpi",
+      "url": "https://addons.mozilla.org/firefox/downloads/file/5175215/darkreader-4.9.134.xpi"
+    }
+  ],
+  "native": {
+    "metadata": {
+      "addon@darkreader.org": {
+        "compatible": true,
+        "id": "addon@darkreader.org",
+        "signedState": 2,
+        "type": "extension",
+        "version": "4.9.134"
+      }
+    },
+    "repository": {
+      "addon@darkreader.org": {
+        "amoListingURL": "https://addons.mozilla.org/en-US/firefox/addon/darkreader/",
+        "averageRating": 4.4827,
+        "contributionURL": "https://opencollective.com/darkreader?utm_content=product-page-contribute&utm_medium=referral&utm_source=addons.mozilla.org",
+        "creator": {
+          "name": "Dark Reader Ltd",
+          "toString": {},
+          "url": "https://addons.mozilla.org/en-US/firefox/user/13299734/"
+        },
+        "description": "Dark mode for every website. Take care of your eyes, use dark theme for night and daily browsing.",
+        "developers": [],
+        "fullDescription": "This eye-care extension enables night mode creating dark themes for websites on the fly. Dark Reader inverts bright colors making them high contrast and easy to read at night.\n\nYou can adjust brightness, contrast, sepia filter, dark mode, font settings and ignore-list.\n\nDark Reader doesn't show ads and doesn't send user's data anywhere. It is fully open-source https://github.com/darkreader/darkreader\n\nBefore you install disable similar extensions. Enjoy watching!",
+        "homepageURL": "https://darkreader.org/",
+        "icons": {
+          "128": "https://addons.mozilla.org/user-media/addon_icons/855/855413-128.png?modified=3f34e276",
+          "32": "https://addons.mozilla.org/user-media/addon_icons/855/855413-32.png?modified=3f34e276",
+          "64": "https://addons.mozilla.org/user-media/addon_icons/855/855413-64.png?modified=3f34e276"
+        },
+        "id": "addon@darkreader.org",
+        "name": "Dark Reader",
+        "reviewCount": 2252,
+        "reviewURL": "https://addons.mozilla.org/en-US/firefox/addon/darkreader/reviews/",
+        "screenshots": [
+          {
+            "caption": "Dark Reader night theme mode",
+            "height": 1500,
+            "thumbnailHeight": 333,
+            "thumbnailURL": "https://addons.mozilla.org/user-media/previews/thumbs/201/201069.jpg?modified=1638883247",
+            "thumbnailWidth": 533,
+            "toString": {},
+            "url": "https://addons.mozilla.org/user-media/previews/full/201/201069.png?modified=1638883247",
+            "width": 2400
+          },
+          {
+            "caption": "Dark Reader filter settings",
+            "height": 1500,
+            "thumbnailHeight": 333,
+            "thumbnailURL": "https://addons.mozilla.org/user-media/previews/thumbs/201/201070.jpg?modified=1638883247",
+            "thumbnailWidth": 533,
+            "toString": {},
+            "url": "https://addons.mozilla.org/user-media/previews/full/201/201070.png?modified=1638883247",
+            "width": 2400
+          }
+        ],
+        "sourceURI": "https://addons.mozilla.org/firefox/downloads/file/5175215/darkreader-4.9.134.xpi",
+        "supportURL": "https://github.com/darkreader/darkreader",
+        "type": "extension",
+        "updateDate": 1793142395000,
+        "version": "4.9.134",
+        "weeklyDownloads": 25257
+      }
+    }
+  },
+  "purifier": "firefox",
+  "sdk": "5594173df9a0eaf61f2db1a4ffb47f237c16409f65fed25266d33ce19de353e1",
+  "selection": {
+    "extensions": [
+      "addon@darkreader.org"
+    ]
+  },
+  "version": 1
+}
