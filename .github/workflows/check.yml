@@ -22,6 +22,8 @@ jobs:
           .#checks --apply
           'all: builtins.mapAttrs (_: checks: builtins.mapAttrs (_: drv: drv.drvPath) checks) all'
       - run: nix flake check -L
+      - name: Rebuild native exports, resource views and ordinary consumers
+        run: python3 tests/resource-rebuild.py
       - run: nix build .# --out-link result-cli
       - run: nix build .#firefox --out-link result-firefox
       - run: nix build .#gui-test-env --out-link result-test-env
