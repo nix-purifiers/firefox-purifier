@@ -75,6 +75,10 @@
           };
         in
         {
+          resource-projections = import ./tests/resource-projections.nix {
+            pkgs = pkgsFor system;
+            build = p.buildFirefoxProject;
+          };
           cli = p.cli;
           sdk = p.makeSdk (map (entry: entry.id) (p.readLock { src = ./examples/minimal; }).entries);
           inherit (build.packages) environment project;

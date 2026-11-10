@@ -1,0 +1,9 @@
+{
+  "name": "firefox",
+  "builder": "Firefox",
+  "roots": {
+    "page.png": "page.png",
+    "page.json": "page.json"
+  },
+  "changedFile": "answer.json"
+}

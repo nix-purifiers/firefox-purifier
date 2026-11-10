@@ -1,6 +1,8 @@
 {
   lib,
+  purifier,
   runCommand,
+  python3,
   nativePython,
   geckodriver,
   environment,
@@ -16,6 +18,8 @@
   fetchers ? { },
   doCheck ? false,
   checkCommand ? "",
+  resourceRoots ? { },
+  resourceDependencies ? [ ],
 }:
 let
   lock = readLock { inherit src lockFile; };
@@ -40,7 +44,7 @@ let
         "output"
       ]);
   };
-  project = runCommand "firefox-project" { } ''
+  builtProject = runCommand "firefox-project" { } ''
     export FIREFOX_PURIFIER_ENVIRONMENT=${profile}
     export FIREFOX_PURIFIER_FONTS=${fontConfig}
     export FIREFOX_PURIFIER_GECKODRIVER=${geckodriver}/bin/geckodriver
@@ -53,6 +57,17 @@ let
     ${nativePython}/bin/python ${driver}/firefox_purifier_run_project.py "$PWD" "$FIREFOX_PURIFIER_SCRIPT" "$FIREFOX_PURIFIER_STATE" ${profile} "$out"
     ${lib.optionalString doCheck checkCommand}
   '';
+  projections = lib.optionalAttrs (resourceRoots != { }) (
+    purifier.resourceProjections {
+      producer = builtProject;
+      roots = resourceRoots;
+      dependencies = resourceDependencies;
+      inherit runCommand python3;
+    }
+  );
+  project = builtProject // {
+    inherit projections;
+  };
   release =
     runCommand "firefox-project-release"
       {
@@ -73,6 +88,6 @@ in
     environment = profile;
   };
   tests = project;
-  inherit release;
+  inherit release projections;
   fetches = lock.entries;
 }
